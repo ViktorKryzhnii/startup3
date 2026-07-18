@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Startup 3 </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header__inner">
+    <a href="#hero" class="logo">Startup<span>3</span></a>
+
+    <nav class="nav" id="mainNav">
+      <ul class="nav__list">
+        <li><a href="#hero" class="nav__link nav__link--active">Home</a></li>
+        <li><a href="#features" class="nav__link">Features</a></li>
+        <li><a href="#pricing" class="nav__link">Pricing</a></li>
+        <li><a href="#contact" class="nav__link">Blog</a></li>
+        <li><a href="#" class="nav__link nav__icon" aria-label="Dribbble">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 9c4 1.5 12 1.5 16 0M3 14c5 1 13 1 18 0M9 3c3 5 4 12 2 18" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+        </a></li>
+        <li><a href="#" class="nav__link nav__link--bold">Bē</a></li>
+      </ul>
+    </nav>
+
+    <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="hero" style="background-image:url('assets/images/hero-bg.jpg')">
+  <div class="hero__overlay"></div>
+  <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="Попередній слайд">&#10094;</button>
+  <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="Наступний слайд">&#10095;</button>
+
+  <div class="container hero__content">
+    <p class="hero__eyebrow">Startup 3</p>
+    <h1 class="hero__title">Forget About Code</h1>
+    <p class="hero__text">
+      Startup Framework gives you complete freedom over your creative
+      process — you don't have to think about any technical aspects. There
+      are no limits and absolutely no coding.
+    </p>
+
+    <div class="hero__dots" id="heroDots">
+      <button class="dot dot--active" data-slide="0" aria-label="Слайд 1"></button>
+      <button class="dot" data-slide="1" aria-label="Слайд 2"></button>
+      <button class="dot" data-slide="2" aria-label="Слайд 3"></button>
+      <button class="dot" data-slide="3" aria-label="Слайд 4"></button>
+      <button class="dot" data-slide="4" aria-label="Слайд 5"></button>
+    </div>
+
+    <a href="#contact" class="btn btn--indigo">Create an Account</a>
+  </div>
+</section>
+
+<section class="content" id="content" style="background-image:url('assets/images/content-bg.jpg')">
+  <div class="content__overlay"></div>
+  <div class="container content__inner">
+    <div class="content__laptop">
+      <img src="assets/images/laptop-mockup.png" alt="Скріншот проєкту на ноутбуці" loading="lazy">
+    </div>
+
+    <div class="content__text">
+      <h2 class="section-title">We Create Something New</h2>
+      <p class="section-lead">
+        We have created a new product that will help designers,
+        developers and companies create websites for their startups
+        quickly and easily.
+      </p>
+
+      <div class="content__features">
+        <div class="mini-feature">
+          <span class="mini-feature__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="13" height="13" rx="2"/><path d="M8 21h13V8"/></svg>
+          </span>
+          <h3>30 New Feature Pages</h3>
+          <p>Startup Framework contains components and complex blocks which can easily.</p>
+        </div>
+        <div class="mini-feature">
+          <span class="mini-feature__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h12l3 5-9 13L3 8z"/><path d="M3 8h18M9 3l3 5 3-5M12 8l-2 13M12 8l2 13"/></svg>
+          </span>
+          <h3>Useful Symbol Components</h3>
+          <p>Samples will show you the feeling on how to play around using the components.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content__side-dots">
+    <span class="side-dot side-dot--active"></span>
+    <span class="side-dot"></span>
+    <span class="side-dot"></span>
+    <span class="side-dot"></span>
+    <span class="side-dot"></span>
+  </div>
+</section>
+
+<section class="banner" id="features" style="background-image:url('assets/images/waves-bg-2.jpg')">
+  <div class="banner__overlay"></div>
+  <div class="container banner__inner">
+    <p class="banner__eyebrow">Free Sample</p>
+    <h2 class="banner__title">Powerful Generator and Free Figma Sources</h2>
+    <p class="banner__text">
+      Startup Framework contains components and complex blocks which can easily be
+      integrated into almost any design. All of the components are made in the same style, and
+      can easily be integrated into projects, allowing you to create hundreds of solutions.
+    </p>
+  </div>
+</section>
+
+<section class="works" id="works">
+  <div class="container">
+    <div class="works__head">
+      <h2 class="section-title section-title--light">Last works</h2>
+      <a href="#" class="btn btn--outline">View all Works</a>
+    </div>
+
+    <div class="works__grid">
+      <a href="#" class="work-card">
+        <img src="assets/images/work-taco.jpg" alt="Mozart Project" loading="lazy">
+        <span class="work-card__tag">UI Kit</span>
+        <span class="work-card__title">Mozart Project</span>
+      </a>
+      <a href="#" class="work-card">
+        <img src="assets/images/work-road.jpg" alt="Startup Framework 2.0" loading="lazy">
+        <span class="work-card__tag">Framework</span>
+        <span class="work-card__title">Startup Framework 2.0</span>
+      </a>
+      <a href="#" class="work-card">
+        <img src="assets/images/work-building.jpg" alt="From the Sky" loading="lazy">
+        <span class="work-card__tag">Photos</span>
+        <span class="work-card__title">From the Sky</span>
+      </a>
+      <a href="#" class="work-card">
+        <img src="assets/images/work-street.jpg" alt="Air Forces" loading="lazy">
+        <span class="work-card__tag">Pictures</span>
+        <span class="work-card__title">Air Forces</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="cta" style="background-image:url('assets/images/cta-bg.jpg')">
+  <div class="cta__overlay"></div>
+  <div class="container cta__inner">
+    <h2 class="cta__title">Easy to setup.<br>Easy to maintain</h2>
+    <p class="cta__text">
+      Bootstrap is a widely-used, sleek, intuitive and
+      powerful front-end framework for faster and
+      easier web development.
+    </p>
+    <div class="cta__actions">
+      <button class="play-btn" id="playBtn" aria-label="Відтворити відео">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <a href="#pricing" class="btn btn--teal">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing" style="background-image:url('assets/images/pricing-bg.jpg')">
+  <div class="pricing__overlay"></div>
+  <div class="container">
+    <div class="pricing__head">
+      <h2 class="section-title section-title--light">Plans &amp; Pricing</h2>
+      <p class="section-lead section-lead--center">
+        Startup Framework is free forever — you only pay for
+        custom domain hosting or to export your site.
+      </p>
+    </div>
+
+    <div class="pricing__grid">
+
+      <div class="price-card">
+        <h3 class="price-card__name">Starter</h3>
+        <p class="price-card__price">9.99<span>$</span></p>
+        <ul class="price-card__list">
+          <li class="is-on">2 GB of space</li>
+          <li class="is-on">14 days of backups</li>
+          <li class="is-on">Social integrations</li>
+          <li class="is-on">Client billing</li>
+          <li>Remote access</li>
+          <li>Custom domain</li>
+          <li>24 hours support</li>
+          <li>Admin tools</li>
+          <li>Collaboration tools</li>
+          <li>User management</li>
+        </ul>
+        <a href="#contact" class="btn btn--outline btn--block">Get Started</a>
+      </div>
+
+      <div class="price-card price-card--highlight">
+        <h3 class="price-card__name">Professional</h3>
+        <p class="price-card__price">19.99<span>$</span></p>
+        <ul class="price-card__list">
+          <li class="is-on">2 GB of space</li>
+          <li class="is-on">14 days of backups</li>
+          <li class="is-on">Social integrations</li>
+          <li class="is-on">Client billing</li>
+          <li class="is-on">Remote access</li>
+          <li class="is-on">Custom domain</li>
+          <li class="is-on">24 hours support</li>
+          <li>Admin tools</li>
+          <li>Collaboration tools</li>
+          <li>User management</li>
+        </ul>
+        <a href="#contact" class="btn btn--pink btn--block">Get Started</a>
+      </div>
+
+      <div class="price-card">
+        <h3 class="price-card__name">Team</h3>
+        <p class="price-card__price">49.99<span>$</span></p>
+        <ul class="price-card__list">
+          <li class="is-on">2 GB of space</li>
+          <li class="is-on">14 days of backups</li>
+          <li class="is-on">Social integrations</li>
+          <li class="is-on">Client billing</li>
+          <li class="is-on">Remote access</li>
+          <li class="is-on">Custom domain</li>
+          <li class="is-on">24 hours support</li>
+          <li class="is-on">Admin tools</li>
+          <li class="is-on">Collaboration tools</li>
+          <li class="is-on">User management</li>
+        </ul>
+        <a href="#contact" class="btn btn--outline btn--block">Get Started</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <div class="container">
+    <h2 class="section-title section-title--light">Startup Crew</h2>
+    <p class="section-lead">
+      The most important part of the Startup Framework is the samples. The
+      samples form a set of 25 usable pages you can use as is or you can add
+      new blocks from UI Kit.
+    </p>
+
+    <div class="team__grid">
+      <div class="team-card">
+        <img src="assets/images/team-1.jpg" alt="Leah Salomon" loading="lazy">
+        <h3>Leah Salomon</h3>
+        <p>UI Designer</p>
+        <div class="social-row">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Dribbble">●</a>
+          <a href="#" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="assets/images/team-2.jpg" alt="Colin Timmons" loading="lazy">
+        <h3>Colin Timmons</h3>
+        <p>UX Designer</p>
+        <div class="social-row">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Dribbble">●</a>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="assets/images/team-3.jpg" alt="Miguel Osborne" loading="lazy">
+        <h3>Miguel Osborne</h3>
+        <p>Front-end Developer</p>
+        <div class="social-row">
+          <a href="#" aria-label="Skype">S</a>
+          <a href="#" aria-label="Medium">M</a>
+          <a href="#" aria-label="Github">git</a>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="assets/images/team-4.jpg" alt="Taylor Simon" loading="lazy">
+        <h3>Taylor Simon</h3>
+        <p>Product Manager</p>
+        <div class="social-row">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="assets/images/team-5.jpg" alt="Steven MacAlister" loading="lazy">
+        <h3>Steven MacAlister</h3>
+        <p>Copyrighter</p>
+        <div class="social-row">
+          <a href="#" aria-label="Twitter">𝕏</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <h2 class="section-title section-title--light">Our Happy Clients</h2>
+
+    <div class="testimonials__grid">
+      <blockquote class="testimonial-card">
+        <img src="assets/images/avatar-1.jpg" alt="Rayhan Curran" loading="lazy">
+        <div>
+          <p>Get a fully retina ready site when you build with Startup Framework.
+            Websites look sharper and more gorgeous on devices with retina display support</p>
+          <cite>Rayhan Curran</cite>
+        </div>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <img src="assets/images/avatar-2.jpg" alt="Kayley Frame" loading="lazy">
+        <div>
+          <p>As a business targeting high net worth individuals, we were looking
+            for a slick, cool and mini-malistic design for our website</p>
+          <cite>Kayley Frame</cite>
+        </div>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <img src="assets/images/avatar-3.jpg" alt="Gene Whitfield" loading="lazy">
+        <div>
+          <p>The most important part of the Startup Framework is the samples</p>
+          <cite>Gene Whitfield</cite>
+        </div>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <img src="assets/images/avatar-4.jpg" alt="Allan Kim" loading="lazy">
+        <div>
+          <p>I've built my website with Startup just in one day, and it was ready-to-go.</p>
+          <cite>Allan Kim</cite>
+        </div>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="auth" id="auth" style="background-image:url('assets/images/waves-bg-1.jpg')">
+  <div class="auth__overlay"></div>
+  <div class="container auth__inner">
+    <div class="auth__text">
+      <h2 class="auth__title">We solve digital problems with an outstanding creative flare</h2>
+      <p>
+        We have created a new product that will help
+        designers, developers and companies create
+        websites for their startups quickly and easily.
+      </p>
+    </div>
+
+    <div class="auth-card">
+      <div class="auth-card__tabs">
+        <button class="auth-tab auth-tab--active" data-tab="signup">Sign up</button>
+        <button class="auth-tab" data-tab="login">Login</button>
+      </div>
+
+      <form class="auth-form" id="signupForm" data-form="signup">
+        <label class="field">
+          <span class="visually-hidden">Ваш email</span>
+          <input type="email" name="email" placeholder="Your email" required>
+        </label>
+        <label class="field">
+          <span class="visually-hidden">Ваш пароль</span>
+          <input type="password" name="password" placeholder="Your password" required>
+        </label>
+        <button type="submit" class="btn btn--teal btn--block">Create an Account</button>
+        <div class="auth-form__divider"><span>or</span></div>
+        <button type="button" class="btn btn--twitter btn--block">Login via Twitter</button>
+      </form>
+
+      <form class="auth-form" id="loginForm" data-form="login" hidden>
+        <label class="field">
+          <span class="visually-hidden">Ваш email</span>
+          <input type="email" name="email" placeholder="Your email" required>
+        </label>
+        <label class="field">
+          <span class="visually-hidden">Ваш пароль</span>
+          <input type="password" name="password" placeholder="Your password" required>
+        </label>
+        <button type="submit" class="btn btn--teal btn--block">Log In</button>
+        <div class="auth-form__divider"><span>or</span></div>
+        <button type="button" class="btn btn--twitter btn--block">Login via Twitter</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" style="background-image:url('assets/images/contact-bg.jpg')">
+  <div class="contact__overlay"></div>
+  <div class="container contact__inner">
+    <div class="contact__text">
+      <h2 class="contact__title">Let's Keep in Touch</h2>
+      <p>
+        We have created a new product that
+        will help designers, developers and
+        companies create websites for their
+        startups quickly and easily.
+      </p>
+
+      <ul class="contact__info">
+        <li><span aria-hidden="true">☎</span> +1 555 505 5050</li>
+        <li><span aria-hidden="true">✉</span> info@designmodo.com</li>
+        <li><span aria-hidden="true">⌂</span> San Francisco, CA 560 Bush St &amp;
+          20th Ave, Apt5 San Francisco, 230909</li>
+      </ul>
+    </div>
+
+    <form class="contact-card" id="contactForm">
+      <div class="contact-card__row">
+        <label class="field">
+          <span class="field__label">Your name</span>
+          <input type="text" name="firstname" placeholder="First name" required>
+        </label>
+        <label class="field">
+          <span class="field__label">Budget</span>
+          <select name="budget">
+            <option>$500</option>
+            <option>$1000</option>
+            <option>$5000</option>
+            <option>$10000+</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="field">
+        <span class="field__label">Input field</span>
+        <input type="email" name="email" placeholder="name@mail.com" required>
+      </label>
+
+      <label class="field">
+        <span class="field__label">Your message</span>
+        <textarea name="message" rows="4" placeholder="Message"></textarea>
+      </label>
+
+      <div class="contact-card__footer">
+        <label class="checkbox">
+          <input type="checkbox" name="copy" checked>
+          <span class="checkbox__box"></span>
+          Send me a copy
+        </label>
+        <button type="submit" class="btn btn--teal">Send</button>
+      </div>
+      <p class="contact-card__success" id="contactSuccess" hidden>Дякуємо! Повідомлення надіслано.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <a href="#hero" class="logo logo--footer">Startup<span>3</span></a>
+      <ul class="footer__socials">
+        <li><a href="#" aria-label="Privacy Policy" class="footer__text-link">Privacy Policy</a></li>
+        <li><a href="#" aria-label="Terms" class="footer__text-link">Terms</a></li>
+        <li><a href="#" aria-label="Twitter">𝕏</a></li>
+        <li><a href="#" aria-label="Facebook">f</a></li>
+        <li><a href="#" aria-label="Google Plus">G+</a></li>
+      </ul>
+    </div>
+
+    <hr class="footer__divider">
+
+    <div class="footer__bottom">
+      <ul class="footer__nav">
+        <li><a href="#hero">Tour</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing Plans</a></li>
+        <li><a href="#works">Our Works</a></li>
+        <li><a href="#team">Brands</a></li>
+        <li><a href="#contact">Contacts</a></li>
+      </ul>
+      <p class="footer__copy">© <span id="year">2026</span> Designmodo. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTopBtn" aria-label="Нагору">↑</button>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
