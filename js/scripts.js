@@ -44,10 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(section => sectionObserver.observe(section));
 
   const dots = Array.from(document.querySelectorAll('#heroDots .dot'));
+  const slides = Array.from(document.querySelectorAll('#heroSlides .hero__slide'));
   let currentSlide = 0;
   const setSlide = (index) => {
     currentSlide = (index + dots.length) % dots.length;
     dots.forEach((dot, i) => dot.classList.toggle('dot--active', i === currentSlide));
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === currentSlide));
   };
   dots.forEach((dot, i) => dot.addEventListener('click', () => setSlide(i)));
   document.getElementById('heroPrev').addEventListener('click', () => setSlide(currentSlide - 1));
@@ -80,6 +82,68 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ---------- Кастомний випадаючий список (Budget) ---------- */
+  document.querySelectorAll('.custom-select').forEach(root => {
+    const trigger = root.querySelector('.custom-select__trigger');
+    const valueEl = root.querySelector('.custom-select__value');
+    const list = root.querySelector('.custom-select__list');
+    const nativeSelect = root.querySelector('select');
+    const options = Array.from(list.querySelectorAll('li'));
+
+    const closeList = () => {
+      root.classList.remove('is-open');
+      list.hidden = true;
+      trigger.setAttribute('aria-expanded', 'false');
+    };
+    const openList = () => {
+      root.classList.add('is-open');
+      list.hidden = false;
+      trigger.setAttribute('aria-expanded', 'true');
+      const active = list.querySelector('.is-selected') || options[0];
+      if (active) active.focus();
+    };
+
+    trigger.addEventListener('click', () => {
+      root.classList.contains('is-open') ? closeList() : openList();
+    });
+
+    options.forEach(option => {
+      option.setAttribute('tabindex', '-1');
+      option.addEventListener('click', () => {
+        options.forEach(o => o.classList.remove('is-selected'));
+        option.classList.add('is-selected');
+        valueEl.textContent = option.dataset.value;
+        nativeSelect.value = option.dataset.value;
+        nativeSelect.dispatchEvent(new Event('change', { bubbles: true }));
+        closeList();
+        trigger.focus();
+      });
+      option.addEventListener('keydown', (e) => {
+        const currentIndex = options.indexOf(document.activeElement);
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          (options[currentIndex + 1] || options[0]).focus();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          (options[currentIndex - 1] || options[options.length - 1]).focus();
+        } else if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          option.click();
+        } else if (e.key === 'Escape') {
+          closeList();
+          trigger.focus();
+        }
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!root.contains(e.target)) closeList();
+    });
+    trigger.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeList();
+    });
+  });
+
   const contactForm = document.getElementById('contactForm');
   const contactSuccess = document.getElementById('contactSuccess');
   if (contactForm) {
@@ -87,6 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       contactSuccess.hidden = false;
       contactForm.reset();
+      contactForm.querySelectorAll('.custom-select').forEach(root => {
+        const options = Array.from(root.querySelectorAll('.custom-select__list li'));
+        options.forEach((o, i) => o.classList.toggle('is-selected', i === 0));
+        const valueEl = root.querySelector('.custom-select__value');
+        if (options[0]) valueEl.textContent = options[0].dataset.value;
+      });
       setTimeout(() => { contactSuccess.hidden = true; }, 4000);
     });
   }
