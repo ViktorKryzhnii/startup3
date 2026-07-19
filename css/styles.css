@@ -630,7 +630,7 @@ h1, h2, h3 {
   gap: 56px 40px;
   margin-top: 60px;
 }
-.team-card img {
+.team-card > img {
   width: 90px;
   height: 90px;
   border-radius: 50%;
@@ -657,16 +657,21 @@ h1, h2, h3 {
   justify-content: center;
   width: 32px;
   height: 32px;
-  color: var(--c-text-muted);
-  transition: color .2s ease, transform .2s ease;
+  transition: transform .2s ease, opacity .2s ease;
 }
-.icon-link svg {
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
   width: 18px;
   height: 18px;
 }
+.hero__arrow .icon {
+  width: 20px;
+  height: 20px;
+}
 .icon-link:hover {
-  color: var(--c-teal);
   transform: translateY(-2px);
+  opacity: .8;
 }
 .testimonials {
   background: var(--c-indigo-900);
@@ -686,6 +691,12 @@ h1, h2, h3 {
   padding: 40px;
   border: 1px solid rgba(255,255,255,.12);
   border-radius: var(--radius-l);
+  background: linear-gradient(135deg, rgba(72,43,231,.35) 0%, rgba(233,58,125,.16) 100%);
+  transition: transform .25s ease, border-color .25s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,.25);
 }
 .testimonial-card img {
   width: 56px;
@@ -828,6 +839,8 @@ h1, h2, h3 {
   border-color: var(--c-indigo-btn);
 }
 .custom-select__arrow {
+  width: 14px;
+  height: 14px;
   flex-shrink: 0;
   color: #a9a5bb;
   transition: transform .2s ease;
@@ -999,13 +1012,11 @@ h1, h2, h3 {
 .checkbox__box::after {
   content: '';
   position: absolute;
-  left: 6px;
-  top: 2px;
-  width: 5px;
-  height: 10px;
-  border-right: 2px solid var(--c-white);
-  border-bottom: 2px solid var(--c-white);
-  transform: rotate(40deg);
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 12px;
   opacity: 0;
 }
 .checkbox input:checked + .checkbox__box::after {
@@ -1152,5 +1163,15 @@ h1, h2, h3 {
   }
   .hero__arrow {
     display: none;
+  }
+  .team-card {
+    text-align: center;
+  }
+  .team-card > img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .team-card .social-row {
+    justify-content: center;
   }
 }
